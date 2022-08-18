@@ -15,7 +15,7 @@ const Search = ({ buttonLabel, onSearch }) => {
     };
     return (
         <>         
-          <Input type="text" onChange={onChange} value={value} />
+          <Input placeholder="Pokemon" type="text" onChange={onChange} value={value} />
           <Button label={buttonLabel} onClick={handleClick} />
         </>
       );
