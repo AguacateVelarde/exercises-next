@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../components/atoms/Button';
 import PokemonSearch from '../components/organisms/PokemonSearch';
 
 export default function Home() {
@@ -8,6 +9,11 @@ export default function Home() {
   ];
   const [myPokemons, setMyPokemons] = useState([]);
 
+  const pokemonLi = basePokemons.map((pokemon) =>
+  // eslint-disable-next-line react/jsx-key
+  <li>{pokemon}</li>
+); 
+
   const handleSearch = (searchWord) => {
     const filter = (pokemon) => pokemon === searchWord;
     const selectedPokemons = basePokemons.filter(filter);
@@ -15,6 +21,9 @@ export default function Home() {
   };
 
   return (
+    <>
     <PokemonSearch pokemonsList={myPokemons} onSearch={handleSearch} />
+    <ul>{pokemonLi}</ul>
+    </>
   );
 }

@@ -1,6 +1,6 @@
-const Input = ({ type, value, onChange }) => (
+const Input = ({ type, value, onChange, placeholder }) => (
     <>
-        <input type={type} value={value} onChange={onChange} />
+        <input type={type} placeholder={placeholder} value={value} onChange={onChange} className="input"/>
     </>
 );
 
