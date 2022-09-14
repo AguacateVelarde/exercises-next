@@ -10,7 +10,6 @@ const Search = ({ buttonLabel, onSearch }) => {
     }
 
     const onChange = (event) => {
-        console.log({ event })
         event.preventDefault();
         setValue(event.target.value);
     };
