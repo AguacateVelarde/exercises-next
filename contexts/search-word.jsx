@@ -25,6 +25,7 @@ function searchWordReducer(state, action) {
         pokemonFavorites: state.pokemonFavorites.filter(pokemon => pokemon !== action.pokemon)
       };
     }
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
