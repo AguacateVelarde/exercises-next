@@ -19,6 +19,13 @@ function searchWordReducer(state, action) {
         ] 
       };
     }
+     case 'delete': {
+      return {
+        ...state,
+        pokemonFavorites: state.pokemonFavorites.filter(pokemon => pokemon !== action.pokemon)
+      };
+    }
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }

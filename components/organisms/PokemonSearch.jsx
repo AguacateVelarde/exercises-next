@@ -8,10 +8,15 @@ const PokemonItem = ({ index, pokemon }) => {
     const handleOnFav = () => {
         dispatch({ type: 'add-pokemon', pokemon });
     }
+    const handleOnDelete = () => {
+        dispatch({ type: 'delete', pokemon });
+    }
     return (
         <li key={`my-pokemon-${index}`}>
-            {pokemon} 
+            {pokemon}
             <button onClick={handleOnFav}> Guardar en favoritos </button>
+            <button onClick={handleOnDelete}> Eliminar de favoritos </button>
+
         </li>
     );
 }

@@ -19,6 +19,22 @@ a {
 tr {
   margin: 20px;
 }
+.btn{
+    background-color: darkorange;
+    color: white;
+    height: 30px;
+}
+.input{
+  height: 30px;
+}
+.btn{
+    background-color: darkorange;
+    color: white;
+    height: 54px;
+}
+.input{
+  height: 30px;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
