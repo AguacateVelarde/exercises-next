@@ -1,7 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useId } from 'react';
 import PokemonSearch from '../components/organisms/PokemonSearch';
 import { pokemonService } from '../services';
 import { SearchWordContext } from '../contexts/search-word';
+import PokemonItem from '../components/organisms/PokemonItem';
 
 export default function Home() {
   const basePokemons = [
@@ -32,7 +33,9 @@ export default function Home() {
 
       <ul>
         {
-          pokemonFavorites.map((pokemon, index) => <li key={index}>{pokemon}</li>)
+          pokemonFavorites.map((pokemon, index) => {          
+            return <PokemonItem key={`pokemon-item-${index}`} pokemon={pokemon} />
+          })
         }
       </ul>
     </>
